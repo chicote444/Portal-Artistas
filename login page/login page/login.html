@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Login</title>
+</head>
+
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form action="login.php" method="post">
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <button type="submit">Entrar</button>
+      </div>
+    </form>
+    <div class="options">
+      <a href="reset_password.html">Esqueceu sua senha?</a>
+      <br>
+      <a href="other_options.html">Ativar conta via e-mail</a>
+    </div>
+  </div>
+
+  <script>
+    function validateForm() {
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+
+      console.log("Email: " + email);
+      console.log("Senha: " + password);
+
+      return true;
+    }
+
+    function forgotPassword() {
+      alert("Um email de redefinição foi enviado para o seu endereço de email.");
+      window.location.href = "reset_password.html";
+    }
+  </script>
+
+</body>
+
+</html>
+
+

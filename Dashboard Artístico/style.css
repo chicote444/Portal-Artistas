@@ -1,0 +1,104 @@
+html {
+  height: 100%;
+  width: 100%;
+
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-image: url(ufficiale-scaled.jpg);
+}
+
+.eventos-em-destaque,
+.editais, .informacoes{
+
+  border: 4px solid #000000;
+
+}
+
+.eventos-em-destaque,
+.editais, .noticias, .informacoes , .patrocinio{
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1000px) {
+  .section {
+    display: flex;
+  }
+  .seçao {
+    display: flex;
+  }
+}
+
+.eventos-em-destaque,
+.editais h2 {
+  text-align: center;
+  color: #333;
+}
+
+.evento,
+.edital {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+
+.evento h3 {
+  margin-top: 0;
+  color: #555;
+}
+
+.evento p {
+  margin-bottom: 10px;
+  color: #777;
+}
+
+.evento a,
+button {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.evento a:hover {
+  background-color: #45a049;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+

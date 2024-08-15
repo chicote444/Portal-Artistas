@@ -1,0 +1,68 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+      background-image: url('img/back7.png');
+      background-size: cover; 
+      background-position: center; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.login-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-option img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.login-option.google:hover {
+    background-color: #e8f0fe;
+}
+
+.login-option.github:hover {
+    background-color: #f0f0f0;
+}
+
+.login-option.facebook:hover {
+    background-color: #e9f0fb;
+}
+
+.login-option.others:hover {
+    background-color: #f9f9f9;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
