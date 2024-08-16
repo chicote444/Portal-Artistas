@@ -4,7 +4,7 @@ body {
       background-image: url('img/back7.png');
       background-size: cover; 
       background-position: center; 
-      display: flex;
+      display: block;
       justify-content: center;
       align-items: center;
       height: 100vh;
@@ -12,6 +12,7 @@ body {
     }
     
     .login-container {
+    margin: 5dvw 4dvw 0 35dvw;
     background-color: #ffffff;
     width: 300px;
     padding: 50px;

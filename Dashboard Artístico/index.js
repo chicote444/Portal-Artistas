@@ -97,7 +97,6 @@ function loadSuccesses() {
 }
 
 
-document.getElementById('load-more').addEventListener('click', loadSuccesses);
 
 
 loadSuccesses();
