@@ -1,6 +1,6 @@
 import express from 'express'
 import cors from 'cors'
-import { eventos } from './dados.js'
+import { eventos, patrocinios } from './dados.js'
 
 
 
@@ -15,6 +15,10 @@ app.get('/', (req, res) => {
 
 app.get('/eventos', (req, res) => {
     res.json(eventos);
+});
+
+app.get('/patrocinios', (req, res) => {
+    res.json(patrocinios);
 });
 
 app.listen(3000, () => console.log ('Servidor rodando na porta 3000!'));

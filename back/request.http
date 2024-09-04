@@ -3,3 +3,11 @@
 ###
 
 GET {{domain}}/
+
+###
+
+GET {{domain}}/eventos
+
+###
+
+GET {{domain}}/patrocinios
