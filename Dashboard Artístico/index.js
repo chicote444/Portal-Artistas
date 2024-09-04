@@ -1,4 +1,10 @@
-
+fetch('http://localhost:3000/eventos')
+.then (response => response.json())
+.then(json => {
+  let newjson = JSON.stringify(json);
+  newjson = JSON.parse(newjson);
+  console.log(newjson);
+})
 
 function info() {
   let y = document.querySelector(".info");
