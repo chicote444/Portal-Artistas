@@ -1,13 +1,28 @@
-fetch('http://localhost:3000/eventos')
+fetch('https://turbo-space-giggle-q7vq7p6g47vp24995-3000.app.github.dev/eventos')
 .then (response => response.json())
 .then(json => {
   let newjson = JSON.stringify(json);
   newjson = JSON.parse(newjson);
   console.log(newjson);
+  let x = document.querySelectorAll(".title");
+  let y = document.querySelectorAll(".pop");
+  var z = document.querySelectorAll(".info");
+  console.log(x);
+  console.log(y);
+  console.log(z);
+  for (let i = 0; i < x.length; i++) {
+    x[i].innerHTML = newjson[i].nome;
+  }
+  for (let i = 0; i < x.length; i++) {
+    y[i].innerHTML += newjson[i].popularidade;
+  }
+  for (let i = 0; i < x.length; i++) {
+    z[i].innerHTML = newjson[i].descricao;
+  }
 })
 
 function info() {
-  let y = document.querySelector(".info");
+  let y = document.querySelector("#info1");
   let x = document.querySelectorAll(".evento");
   let z = document.getElementById('sim');
 
@@ -21,14 +36,14 @@ function info() {
 function min() {
   let x = document.querySelectorAll(".evento");
   let z = document.getElementById('sim');
-  let y = document.querySelector(".info");
+  let y = document.querySelector("#info1");
   y.innerHTML = '';
   x[0].removeChild(z)
   x[0].innerHTML += '<button id=sim onclick="info()" >Mais Informações</button>'
 }
 
 function info2() {
-  let y = document.querySelector(".info2");
+  let y = document.querySelector("#info2");
 
   y.innerHTML = infos[1];
 
@@ -36,7 +51,7 @@ function info2() {
 }
 
 function info3() {
-  let y = document.querySelector(".info3");
+  let y = document.querySelector("#info3");
 
   y.innerHTML = infos[2];
 

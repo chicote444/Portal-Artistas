@@ -2,9 +2,11 @@
   "name": "back",
   "type": "module",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "back/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,8 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
   }
 }
