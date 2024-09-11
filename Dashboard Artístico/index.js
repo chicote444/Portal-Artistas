@@ -6,10 +6,32 @@ fetch('https://turbo-space-giggle-q7vq7p6g47vp24995-3000.app.github.dev/eventos'
   console.log(newjson);
   let x = document.querySelectorAll(".title");
   let y = document.querySelectorAll(".pop");
+  let a = document.querySelectorAll(".content");
   var z = document.querySelectorAll(".info");
   console.log(x);
   console.log(y);
   console.log(z);
+  for (let i = 0; i < newjson.length; i++) {
+    x[i].innerHTML = newjson[i].nome;
+    for (j = 0; j < 3; j++) {
+      switch (j) {
+        case 1:
+          y[i].innerHTML += newjson[i].popularidade;
+          break;
+        case 2:
+          a[i].innerHTML = newjson[i].data_de_encerramento;
+          break;
+        case 3:
+          z[i].innerHTML = newjson[i].descricao;
+          break;
+        case 0:
+          x[i].innerHTML = newjson[i].nome;
+      }
+    }
+  }/*
+    switch (j) {}
+  
+
   for (let i = 0; i < x.length; i++) {
     x[i].innerHTML = newjson[i].nome;
   }
@@ -18,7 +40,7 @@ fetch('https://turbo-space-giggle-q7vq7p6g47vp24995-3000.app.github.dev/eventos'
   }
   for (let i = 0; i < x.length; i++) {
     z[i].innerHTML = newjson[i].descricao;
-  }
+  }*/
 })
 
 function info() {
