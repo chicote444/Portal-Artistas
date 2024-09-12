@@ -25,6 +25,8 @@ app.get('/generate-secret', (req, res) => {
   
   app.post('/verify-token', (req, res) => {
     const { token, secret } = req.body;
+    console.log(`Token recebido: ${token}`);
+    console.log(`Secret recebido: ${secret}`);
     const verified = speakeasy.totp.verify({
       secret: secret,
       encoding: 'base32',

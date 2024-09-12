@@ -30,38 +30,7 @@ fetch('https://crispy-garbanzo-4jq7jw69vj9w3gx5-3000.app.github.dev/eventos')
     }
   }
   
-  fetch('https://crispy-garbanzo-4jq7jw69vj9w3gx5-3000.app.github.dev/generate-secret')
-  .then(response => response.json())
-  .then(data => {
-    document.getElementById('qr-code').innerHTML += `<h4>AUTENTIQUE-SE ATRAVÉS DO QR-CODE:</h4><img src="${data.qr_code}">`;
-    localStorage.setItem('secret', data.secret);
-  });
-
-function verifyToke() {
-  const token = document.getElementById('token').value;
-  const secret = localStorage.getItem('secret');
-  const response = document.getElementById('response');
-  fetch('https://crispy-garbanzo-4jq7jw69vj9w3gx5-3000.app.github.dev/verify-token', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ token, secret })
-  })
-  .then(response => response.json())
-  .then(data => {
-    if (data.verified) {
-      response.innerHTML = 'Token verificado com sucesso!';
-      response.style.color = 'green';
-    } else {
-      response.innerHTML = 'Token inválido!';
-      response.style.color = 'red';
-        
-      }
-    });
-    
-  }
-  function cu() {}
+  
 
   
   /*
@@ -77,7 +46,99 @@ function verifyToke() {
   for (let i = 0; i < x.length; i++) {
     z[i].innerHTML = newjson[i].descricao;
   }*/
-})
+});
+fetch('https://crispy-garbanzo-4jq7jw69vj9w3gx5-3000.app.github.dev/generate-secret')
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById('qr-code').innerHTML += `<h4>AUTENTIQUE-SE ATRAVÉS DO QR-CODE:</h4><img src="${data.qr_code}">`;
+    localStorage.setItem('secret', data.secret);
+  });
+
+function verifyToke() {
+  const token = document.getElementById('token').value;
+  const secret = localStorage.getItem('secret');
+  const response = document.getElementById('response');
+  console.log(secret);
+  fetch('https://crispy-garbanzo-4jq7jw69vj9w3gx5-3000.app.github.dev/verify-token', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ token, secret })
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+    console.log(`Token recebido: ${token}`);
+    console.log(`Secret recebido: ${secret}`);
+    if (data.verified) {
+      response.innerHTML = 'Token verificado com sucesso!';
+      response.style.color = 'green';
+    } else {
+      response.innerHTML = 'Token inválido!';
+      response.style.color = 'red';
+        
+      }
+    });
+    
+  }
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+  }
+
+const apiKey = 'QX4GEKAP6DWOSBOK2SZY'
+
+async function fetchEvents() {
+  const eventContainer = document.getElementById('events');
+
+  try {
+    const response = await fetch('../back/Database/eventos.json');
+    const events = await response.json();
+    updateEvents(events);
+  } catch (error) {
+    console.error('Error fetching events:', error);
+    eventContainer.innerHTML = '<p>There was an error fetching events. Please try again later.</p>';
+  }
+}
+
+function updateEvents(events) {
+  const eventContainer = document.getElementById('events');
+
+  eventContainer.innerHTML = '';
+  const today = new Date();
+  const startOfWeek = new Date(today.setDate(today.getDate() - today.getDay()));
+  const endOfWeek = new Date(today.setDate(today.getDate() - today.getDay() + 6));
+
+  console.log(startOfWeek, endOfWeek);
+  const weeklyEvents = events.filter(event => {
+    const startDate = new Date(event.startDate);
+    const endDate = new Date(event.endDate);
+    console.log(startDate, endDate);
+    return (startDate >= startOfWeek && startDate <= endOfWeek) || (endDate >= startOfWeek && endDate <= endOfWeek);
+  }).slice(0, 3);
+
+  if (weeklyEvents.length > 0) {
+    weeklyEvents.forEach(event => {
+      const eventElement = document.createElement('div');
+      const endDate = new Date(event.endDate);
+      const daysLeft = Math.ceil((endDate - today) / (1000 * 60 * 60 * 24));
+      eventElement.innerHTML = `
+        <h2>${event.name}</h2>
+        <p>${event.description}</p>
+        <p><strong>End Date:</strong> ${endDate.toLocaleDateString()}</p>
+        <p><strong>Days Left:</strong> ${daysLeft} days</p>
+      `;
+      eventContainer.appendChild(eventElement);
+    });
+  } else {
+    eventContainer.innerHTML = '<p>No events found for this week.</p>';
+  }
+}
+
+setInterval(fetchEvents, 24 * 60 * 60 * 1000);
+
+document.addEventListener('DOMContentLoaded', fetchEvents);
+
 
 function info() {
   let y = document.querySelector("#info1");

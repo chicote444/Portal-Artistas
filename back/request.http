@@ -1,4 +1,5 @@
 @domain = 'http://localhost:3000'
+@internet = 'https://crispy-garbanzo-4jq7jw69vj9w3gx5-3000.app.github.dev'
 
 ###
 
@@ -11,3 +12,11 @@ GET {{domain}}/eventos
 ###
 
 GET {{domain}}/patrocinios
+
+###
+
+GET {{internet}}/generate-secret
+
+###
+
+POST {{internet}}/verify-content
