@@ -1,4 +1,4 @@
-fetch('https://turbo-space-giggle-q7vq7p6g47vp24995-3000.app.github.dev/eventos')
+fetch('https://crispy-garbanzo-4jq7jw69vj9w3gx5-3000.app.github.dev/eventos')
 .then (response => response.json())
 .then(json => {
   let newjson = JSON.stringify(json);
@@ -19,7 +19,7 @@ fetch('https://turbo-space-giggle-q7vq7p6g47vp24995-3000.app.github.dev/eventos'
           y[i].innerHTML += newjson[i].popularidade;
           break;
         case 2:
-          a[i].innerHTML = newjson[i].data_de_encerramento;
+          a[i].innerHTML = "Data de Encerramento: " + newjson[i].encerramento;
           break;
         case 3:
           z[i].innerHTML = newjson[i].descricao;
@@ -28,7 +28,43 @@ fetch('https://turbo-space-giggle-q7vq7p6g47vp24995-3000.app.github.dev/eventos'
           x[i].innerHTML = newjson[i].nome;
       }
     }
-  }/*
+  }
+  
+  fetch('https://crispy-garbanzo-4jq7jw69vj9w3gx5-3000.app.github.dev/generate-secret')
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById('qr-code').innerHTML += `<h4>AUTENTIQUE-SE ATRAVÉS DO QR-CODE:</h4><img src="${data.qr_code}">`;
+    localStorage.setItem('secret', data.secret);
+  });
+
+function verifyToke() {
+  const token = document.getElementById('token').value;
+  const secret = localStorage.getItem('secret');
+  const response = document.getElementById('response');
+  fetch('https://crispy-garbanzo-4jq7jw69vj9w3gx5-3000.app.github.dev/verify-token', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ token, secret })
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.verified) {
+      response.innerHTML = 'Token verificado com sucesso!';
+      response.style.color = 'green';
+    } else {
+      response.innerHTML = 'Token inválido!';
+      response.style.color = 'red';
+        
+      }
+    });
+    
+  }
+  function cu() {}
+
+  
+  /*
     switch (j) {}
   
 
@@ -47,7 +83,11 @@ function info() {
   let y = document.querySelector("#info1");
   let x = document.querySelectorAll(".evento");
   let z = document.getElementById('sim');
-
+  fetch('https://crispy-garbanzo-4jq7jw69vj9w3gx5-3000.app.github.dev/eventos') 
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+  })
   y.innerHTML = infos[0];
 
   x[0].removeChild(z)
