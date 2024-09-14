@@ -2,13 +2,13 @@ import Database from './DBconfig.js';
 import fs from "fs";
 
 async function up() {
-  const data = JSON.parse(fs.readFileSync("back/Database/eventos.json", "utf-8"));
+  const data = JSON.parse(fs.readFileSync("back/Database/evento.json", "utf-8"));
   //const data2 = JSON.parse(fs.readFileSync("programa_estudos/src/database/program.json", "utf-8"));
   const db = await Database.connect();
 
   const insertSql = `
-    INSERT INTO eventos (nome, popularidade, encerramento, descricao)
-    VALUES (?, ?, ?, ?)
+    INSERT INTO eventos (nome, descricao, DataHora, localizacao, Organizador, InfoIngresso, ImagemCartaz, DataPublicacao)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
   `;
 
   for (const student of data) {
