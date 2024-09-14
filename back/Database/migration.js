@@ -7,13 +7,13 @@ async function up() {
             CREATE TABLE IF NOT EXISTS eventos (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 nome TEXT NOT NULL,
-                descricao TEXT NOT NULL
-                DataHora DATE  NOT NULL,
+                descricao TEXT NOT NULL,
+                dataHora DATETIME NOT NULL,
                 localizacao VARCHAR(255) NOT NULL,
                 Organizador VARCHAR(255) NOT NULL,
                 InfoIngresso VARCHAR(255),
                 ImagemCartaz VARCHAR(255),
-                DataPublicacao DATETIME NOT NULL,                
+                DataPublicacao DATE NOT NULL               
             )`;
   
   const InscrSql = `   
@@ -23,7 +23,7 @@ async function up() {
                 user_id INTEGER NOT NULL,
                 DataInscricao DATE NOT NULL,
                 FOREIGN KEY (evento_id) REFERENCES eventos(id),
-                FOREIGN KEY (user_id) REFERENCES useres(id),
+                FOREIGN KEY (user_id) REFERENCES useres(id)
 
             )`;
   

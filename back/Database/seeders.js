@@ -2,17 +2,18 @@ import Database from './DBconfig.js';
 import fs from "fs";
 
 async function up() {
-  const data = JSON.parse(fs.readFileSync("/back/Database/cu.json", "utf-8"));
+  const data = JSON.parse(fs.readFileSync("/workspaces/Portal-Artistas/back/Database/cu.json", "utf-8"));
   //const data2 = JSON.parse(fs.readFileSync("programa_estudos/src/database/program.json", "utf-8"));
   const db = await Database.connect();
+  console.log(data);
 
   const insertSql = `
-    INSERT INTO eventos (nome, descricao, DataHora, localizacao, Organizador, InfoIngresso, ImagemCartaz, DataPublicacao)
+    INSERT INTO eventos (nome, descricao, dataHora, localizacao, Organizador, InfoIngresso, ImagemCartaz, DataPublicacao)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?)
   `;
 
   for (const student of data) {
-    await db.run(insertSql, [student.nome, student.descricao, student.DataHora, student.localizacao, student.Organizador, student.InfoIngresso, student.ImagemCartaz, student.DataPublicacao]);
+    await db.run(insertSql, [student.nome, student.descricao, student.ataHora, student.localizacao, student.Organizador, student.InfoIngresso, student.ImagemCartaz, student.DataPublicacao]);
     console.log(student.nome);
   }
 
