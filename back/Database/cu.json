@@ -1,0 +1,24 @@
+[
+    {
+        "nome": "Recital Pedro Valença",
+        "descricao": "O Recital Pedro Valença promete ser um evento emocionante e imperdível! Aqui estão alguns detalhes sobre o que vai ocorrer: <br> Data e Hora: O recital acontecerá no dia 24 de fevereiro de 2024, às 17h, no Espaço Novo Tempo Umarizal1. Local: Espaço Novo Tempo Umarizal, Belém. Artista: Pedro Valença, um talentoso compositor conhecido por sucessos como “Haja Mais Amor”, “Tudo o que Eu Vivi” e 'Só o Começo'. Programação: Prepare-se para uma tarde repleta de música, emoção e boas vibrações. Pedro Valença encantará o público com suas canções que falam de amor, empatia e acolhimento1. Entrada: A entrada será simbólica, apenas 1kg de alimento não perecível, unindo música e solidariedade em um só lugar1. Não perca essa oportunidade única de vivenciar um recital inesquecível e contribuir para uma causa nobre. Marque na sua agenda e convide amigos e familiares para se juntarem a nós nesse evento incrível!",
+        "DataHora": "2024-09-13 17:00:00",
+        "localizacao": "Espaço Novo Tempo Umarizal, Belém",
+        "Organizador": "Pedro Valença",
+        "InfoIngresso": "A entrada será simbólica, apenas 1kg de alimento não perecível, unindo música e solidariedade em um só lugar1.",
+        "ImagemCartaz": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fpt-br%2Ffoto%2Fpessoas-em-um-concerto-3697191%2F&psig=AOvVaw3Q6Z",
+        "DataPublicacao": "2024-09-13"
+    },
+    {
+       "nome": "Exposição de Arte Moderna",
+       "descricao": "A exposição explorará temas como a evolução da arte moderna no Brasil, a influência do modernismo na cultura contemporânea e as novas tendências artísticas",
+       "DataHora": "2024-09-18 17:00:00",
+       "localizacao": "Museu de Arte Moderna, Rio de Janeiro",
+       "Organizador": "Museu de Arte Moderna",
+       "InfoIngresso": "Entrada gratuita",
+       "ImagemCartaz": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fpt-br%2Ffoto%2Fpessoas-em-um-concerto-3697191%2F&psig=AOvVaw3Q6Z",
+       "DataPublicacao": "2024-09-13"   
+
+
+    }
+]

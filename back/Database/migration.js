@@ -8,7 +8,7 @@ async function up() {
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 nome TEXT NOT NULL,
                 descricao TEXT NOT NULL
-                DataHora DATETIME NOT NULL,
+                DataHora DATE  NOT NULL,
                 localizacao VARCHAR(255) NOT NULL,
                 Organizador VARCHAR(255) NOT NULL,
                 InfoIngresso VARCHAR(255),
@@ -40,7 +40,8 @@ async function up() {
                 FOREIGN KEY (user_id) REFERENCES useres(id)
             )`*/
   await db.run('PRAGMA foreign_keys = ON;');
-  await db.run(EventSql, InscrSql);
+  await db.run(EventSql);
+  await db.run(InscrSql);
   //await db.run(semanasql)
 }
  

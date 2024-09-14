@@ -2,7 +2,7 @@ import Database from './DBconfig.js';
 import fs from "fs";
 
 async function up() {
-  const data = JSON.parse(fs.readFileSync("back/Database/evento.json", "utf-8"));
+  const data = JSON.parse(fs.readFileSync("/back/Database/cu.json", "utf-8"));
   //const data2 = JSON.parse(fs.readFileSync("programa_estudos/src/database/program.json", "utf-8"));
   const db = await Database.connect();
 
@@ -12,7 +12,7 @@ async function up() {
   `;
 
   for (const student of data) {
-    await db.run(insertSql, [student.nome, student.popularidade, student.data_de_encerramento, student.descricao]);
+    await db.run(insertSql, [student.nome, student.descricao, student.DataHora, student.localizacao, student.Organizador, student.InfoIngresso, student.ImagemCartaz, student.DataPublicacao]);
     console.log(student.nome);
   }
 
