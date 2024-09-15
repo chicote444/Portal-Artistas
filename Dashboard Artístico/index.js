@@ -1,4 +1,4 @@
-fetch('https://crispy-garbanzo-4jq7jw69vj9w3gx5-3000.app.github.dev/eventos')
+fetch('https://reimagined-goggles-g4xq476wr4vxfx47-3000.app.github.dev/eventos')
 .then (response => response.json())
 .then(json => {
   let newjson = JSON.stringify(json);
@@ -8,22 +8,26 @@ fetch('https://crispy-garbanzo-4jq7jw69vj9w3gx5-3000.app.github.dev/eventos')
   let y = document.querySelectorAll(".pop");
   let a = document.querySelectorAll(".content");
   var z = document.querySelectorAll(".info");
+  var beta = document.querySelectorAll(".img");
   console.log(x);
   console.log(y);
   console.log(z);
+  console.log(newjson[0].ImagemCartaz);
+  beta[0].innerHTML = `<img src= ../back/Database/${newjson[0].ImagemCartaz} alt="Imagem do evento">`;
   for (let i = 0; i < newjson.length; i++) {
     x[i].innerHTML = newjson[i].nome;
-    for (j = 0; j < 3; j++) {
+    for (j = 0; j < 4; j++) {
       switch (j) {
         case 1:
           y[i].innerHTML += newjson[i].popularidade;
           break;
         case 2:
-          a[i].innerHTML = "Data de Encerramento: " + newjson[i].encerramento;
+          a[i].innerHTML = "Data de Ocorrência: " + newjson[i].dataHora;
           break;
         case 3:
-          z[i].innerHTML = newjson[i].descricao;
+          beta[i].innerHTML = `<img src= ../back/Database/${newjson[i].ImagemCartaz} alt="Imagem do evento" width=400px height=180px>`;
           break;
+          
         case 0:
           x[i].innerHTML = newjson[i].nome;
       }
@@ -47,7 +51,7 @@ fetch('https://crispy-garbanzo-4jq7jw69vj9w3gx5-3000.app.github.dev/eventos')
     z[i].innerHTML = newjson[i].descricao;
   }*/
 });
-fetch('https://crispy-garbanzo-4jq7jw69vj9w3gx5-3000.app.github.dev/generate-secret')
+fetch('https://reimagined-goggles-g4xq476wr4vxfx47-3000.app.github.dev/generate-secret')
   .then(response => response.json())
   .then(data => {
     document.getElementById('qr-code').innerHTML += `<h4>AUTENTIQUE-SE ATRAVÉS DO QR-CODE:</h4><img src="${data.qr_code}">`;
@@ -59,7 +63,7 @@ function verifyToke() {
   const secret = localStorage.getItem('secret');
   const response = document.getElementById('response');
   console.log(secret);
-  fetch('https://crispy-garbanzo-4jq7jw69vj9w3gx5-3000.app.github.dev/verify-token', {
+  fetch('https://reimagined-goggles-g4xq476wr4vxfx47-3000.app.github.dev/verify-token', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

@@ -2,11 +2,11 @@
     {
         "nome": "Recital Pedro Valença",
         "descricao": "O Recital Pedro Valença promete ser um evento emocionante e imperdível! Aqui estão alguns detalhes sobre o que vai ocorrer: <br> Data e Hora: O recital acontecerá no dia 24 de fevereiro de 2024, às 17h, no Espaço Novo Tempo Umarizal1. Local: Espaço Novo Tempo Umarizal, Belém. Artista: Pedro Valença, um talentoso compositor conhecido por sucessos como “Haja Mais Amor”, “Tudo o que Eu Vivi” e 'Só o Começo'. Programação: Prepare-se para uma tarde repleta de música, emoção e boas vibrações. Pedro Valença encantará o público com suas canções que falam de amor, empatia e acolhimento1. Entrada: A entrada será simbólica, apenas 1kg de alimento não perecível, unindo música e solidariedade em um só lugar1. Não perca essa oportunidade única de vivenciar um recital inesquecível e contribuir para uma causa nobre. Marque na sua agenda e convide amigos e familiares para se juntarem a nós nesse evento incrível!",
-        "ataHora": "2024-09-13 17:00:00",
+        "ataHora": "2024-09-13 17:01:00",
         "localizacao": "Espaço Novo Tempo Umarizal, Belém",
         "Organizador": "Pedro Valença",
         "InfoIngresso": "A entrada será simbólica, apenas 1kg de alimento não perecível, unindo música e solidariedade em um só lugar1.",
-        "ImagemCartaz": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fpt-br%2Ffoto%2Fpessoas-em-um-concerto-3697191%2F&psig=AOvVaw3Q6Z",
+        "ImagemCartaz": "tela_14-9-2024_222142.jpeg",
         "DataPublicacao": "2024-09-13"
     },
     {
@@ -16,9 +16,19 @@
        "localizacao": "Museu de Arte Moderna, Rio de Janeiro",
        "Organizador": "Museu de Arte Moderna",
        "InfoIngresso": "Entrada gratuita",
-       "ImagemCartaz": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fpt-br%2Ffoto%2Fpessoas-em-um-concerto-3697191%2F&psig=AOvVaw3Q6Z",
+       "ImagemCartaz": "exhibition-of-modern.jpg",
        "DataPublicacao": "2024-09-13"   
 
 
+    },
+    {
+        "nome": "Festival de Cinema Brasileiro",
+        "descricao": "O Festival de Cinema Brasileiro é um evento anual que celebra a diversidade e a criatividade do cinema nacional. Aqui estão alguns detalhes sobre o que vai ocorrer: <br> Data e Hora: O festival acontecerá de 1 a 10 de outubro de 2024, com sessões diárias a partir das 14h, no Cine Brasília. Local: Cine Brasília, Brasília. Programação: O festival contará com uma seleção de filmes brasileiros de diversos gêneros, incluindo drama, comédia, documentário e animação. Além das exibições, haverá debates, palestras e workshops com cineastas, atores e críticos de cinema. Entrada: A entrada será gratuita, sujeita à lotação da sala. Não perca essa oportunidade de prestigiar o cinema nacional e conhecer novos talentos da sétima arte. Marque na sua agenda e convide amigos e familiares para se juntarem a nós nesse evento imperdível!",
+        "ataHora": "2024-09-13 17:00:00",
+        "localizacao": "Cine Brasília, Brasília",
+        "Organizador": "Cine Brasília",
+        "InfoIngresso": "A entrada será gratuita, sujeita à lotação da sala.",
+        "ImagemCartaz": "OIPA.png",
+        "DataPublicacao": "2024-09-13"
     }
 ]

@@ -12,6 +12,16 @@ async function exibirEvent() {
     return eventos;
 }
 
+async function atualizarEvent(evento) {
+    const db = await Database.connect();
+    const updateSql = `
+        UPDATE eventos
+        SET ImagemCartaz = ?
+        WHERE id = ?
+    `;
+    await db.run(updateSql, [evento.nome, evento.descricao, evento.data, evento.hora, evento.local, evento.valor, evento.id]);
+}
+
 async function exibirSemana() {
   const db = await Database.connect();
 

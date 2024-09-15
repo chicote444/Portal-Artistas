@@ -37,9 +37,7 @@ body {
   background-color: #e9dcdc;
 }
 
-.rec {
-  font-size: ;
-}
+
 
 @media (min-width: 1000px) {
   .section {
@@ -102,6 +100,13 @@ button {
 
 .btn:hover {
   background-color: #0056b3;
+}
+
+#qr-code {
+  justify-content: center;
+  align-items: center;
+  box-align: center;
+  text-align: center;
 }
 
 
