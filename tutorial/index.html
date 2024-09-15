@@ -1,58 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal dos Artistas - Tutorial</title>
+    <title>Tutorial - Portal dos Artistas</title>
     <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
-
 <body>
-    <header>
-        <h1>Bem vindo ao Guia de uso do Portal dos Artistas</h1>
-        <nav>
-            <ul>
-                <li><a href="#introducao">Introdução</a></li>
-                <li><a href="#passo1">Passo 1</a></li>
-                <li><a href="#passo2">Passo 2</a></li>
-                <li><a href="#passo3">Passo 3</a></li>
-                <li><a href="../Dashboard Artístico/index.html">Voltar</a></li>
-            </ul>
+    <main>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Portal dos Artistas</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+              aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+              <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="../Dashboard Artístico/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../tutorial/index.html">Tutorial de uso</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Login
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="../login page/login.html">Login</a></li>
+                    <li><a class="dropdown-item" href="contata/contato.html">Cadastre-se</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../pes/inicio.html">Dúvidas, sugestões ou reportar erros</a>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
         </nav>
-    </header>
-    <section>
-        <div class=a>
-            <h1>Para Usuário Comum</h1>
-            <div id="introducao">
-                <h2>Introdução</h2>
-                <p>Este tutorial irá guiá-lo através dos passos necessários para utilizar a tela do portal dos artistas.
-                </p>
-            </div>
-            <div id="passo1">
-                <h2>Passo 1: Acessar o Portal</h2>
-                <p>Primeiro, acesse o portal dos artistas através do link fornecido.</p>
-            </div>
-            <div id="passo2">
-                <h2>Login</h2>
-                <p>Faça login com suas credenciais de artista. <br> Em seguida é necesário selecionar o tipo de login
-                    que
-                    será feito, como artista ou usuário comum.</p>
-            </div>
-            <div id="passo3">
-                <h2>Acessar os eventos</h2>
-                <p>Dentro do espaço da tela inicial, é possível visualizar os eventos em destaque da semana,e para ter
-                    acesso às informações adicionais do evento é necessário clicar em "Mais Informações"</p>
-            </div>
-        </div>
-        <div class=b>
-            <h1>Para Artista</h1>
-        </div>
-    </section>
-    <script src="scripts.js"></script>
-</body>
-<footer>
-    <p>&copy; 2024 Portal dos Artistas. Todos os direitos reservados.</p>
-</footer>
+      </main>
+    <header>
 
+        <h1>Tutorial de Uso para Novos Usuários</h1>
+        
+    </header>
+    <main>
+        
+        <section id="eventos">
+            <h2>Como Acessar Eventos em Destaque</h2>
+            <p>Para acessar os eventos em destaque, siga os passos abaixo:</p>
+            <ol>
+                <li>Vá para a página inicial do Portal dos Artistas.</li>
+                <li>Na barra de navegação, clique em "Eventos".</li>
+                <li>Veja a lista de eventos em destaque e clique no evento desejado para mais detalhes.</li>
+            </ol>
+        </section>
+        <section id="editais">
+            <h2>Como Acessar Editais</h2>
+            <p>Para acessar os editais, siga os passos abaixo:</p>
+            <ol>
+                <li>Vá para a página inicial do Portal dos Artistas.</li>
+                <li>Na barra de navegação, clique em "Editais".</li>
+                <li>Veja a lista de editais disponíveis e clique no edital desejado para mais detalhes.</li>
+            </ol>
+        </section>
+        <section id="login">
+            <h2>Como Fazer Login</h2>
+            <p>Para fazer login, siga os passos abaixo:</p>
+            <ol>
+                <li>Vá para a página inicial do Portal dos Artistas.</li>
+                <li>Na barra de navegação, clique em "Login".</li>
+                <li>Insira seu nome de usuário e senha nos campos apropriados.</li>
+                <li>Clique no botão "Entrar" para acessar sua conta.</li>
+            </ol>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Portal dos Artistas. Todos os direitos reservados.</p>
+    </footer>
+</body>
 </html>

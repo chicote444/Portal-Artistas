@@ -1,9 +1,8 @@
-body {
+html {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
-  text-align: center;
 }
 
 header {
@@ -29,22 +28,19 @@ nav ul li a {
 }
 
 main {
-  padding: 2rem;
+  padding: 0.2rem;
 }
 
 section {
-  margin-bottom: 2rem;
-  display: flex;
+  background-color: #fff;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.a {
-  justify-content: left;
-  margin: 3dvh 30dvw 0 0;
-
-}
-
-.b {
-  margin: 3dvh 20dvw 0 0;
+h2 {
+  color: #333;
 }
 
 footer {
@@ -55,10 +51,4 @@ footer {
   position: fixed;
   width: 100%;
   bottom: 0;
-}
-
-@media (0px < width <=700px) {
-  .b {
-    margin: 3dvh 5dvw 0 0;
-  }
 }
