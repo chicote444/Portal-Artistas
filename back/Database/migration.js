@@ -4,12 +4,12 @@ async function up() {
   const db = await Database.connect();
  
   const EventSql = `   
-            CREATE TABLE IF NOT EXISTS eventos (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                nome TEXT NOT NULL,
-                descricao TEXT NOT NULL,
-                dataHora DATETIME NOT NULL,
-                localizacao VARCHAR(255) NOT NULL,
+            CREATE TABLE IF NOT EXISTS Eventos (
+                EventoID INTEGER PRIMARY KEY AUTOINCREMENT,
+                NomeEvento VARCHAR(255) NOT NULL,
+                Descricao TEXT NOT NULL,
+                DataHora DATETIME NOT NULL,
+                Localizacao VARCHAR(255) NOT NULL,
                 Organizador VARCHAR(255) NOT NULL,
                 InfoIngresso VARCHAR(255),
                 ImagemCartaz VARCHAR(255),
@@ -17,14 +17,25 @@ async function up() {
             )`;
   
   const InscrSql = `   
-            CREATE TABLE IF NOT EXISTS inscricoesEventos (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                evento_id INTEGER NOT NULL,
-                user_id INTEGER NOT NULL,
+            CREATE TABLE IF NOT EXISTS InscricoesEventos (
+                InscricaoEventoID INTEGER PRIMARY KEY AUTOINCREMENT,
+                EventoID INTEGER NOT NULL,
+                UsuarioID INTEGER NOT NULL,
                 DataInscricao DATE NOT NULL,
-                FOREIGN KEY (evento_id) REFERENCES eventos(id),
-                FOREIGN KEY (user_id) REFERENCES useres(id)
+                FOREIGN KEY (EventoID) REFERENCES eventos(EventoID)
 
+            )`;
+    
+    const EditaisSql = `CREATE TABLE IF NOT EXISTS Editais (
+                EditalID INTEGER PRIMARY KEY AUTOINCREMENT,
+                Titulo VARCHAR(255) NOT NULL,
+                Descricao TEXT NOT NULL,
+                CategoriaArtistica DATE NOT NULL,
+                PrazoInscricao DATE NOT NULL,
+                DetalhesFinanciamento VARCHAR(255),
+                CritériosSelecao TEXT NOT NULL,
+                ProcessoInscricao TEXT NOT NULL,
+                Organizador VARCHAR(255) NOT NULL
             )`;
   
   /*const semanasql = `
@@ -42,6 +53,7 @@ async function up() {
   await db.run('PRAGMA foreign_keys = ON;');
   await db.run(EventSql);
   await db.run(InscrSql);
+  await db.run(EditaisSql);
   //await db.run(semanasql)
 }
  

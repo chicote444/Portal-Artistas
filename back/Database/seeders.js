@@ -8,7 +8,7 @@ async function up() {
   console.log(data);
 
   const insertSql = `
-    INSERT INTO eventos (nome, descricao, dataHora, localizacao, Organizador, InfoIngresso, ImagemCartaz, DataPublicacao)
+    INSERT INTO Eventos (NomeEvento, Descricao, DataHora, Localizacao, Organizador, InfoIngresso, ImagemCartaz, DataPublicacao)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?)
   `;
 
