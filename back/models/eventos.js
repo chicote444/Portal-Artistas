@@ -12,6 +12,36 @@ async function exibirEvent() {
     return eventos;
 }
 
+async function exibirEditais() {
+    const db = await Database.connect();
+
+    const selectSql = `
+        SELECT * FROM Editais
+    `;
+    const editais = await db.all(selectSql);
+    return editais;
+}
+
+async function exibirInscricoesEventos() {
+    const db = await Database.connect();
+
+    const selectSql = `
+        SELECT * FROM InscricoesEventos
+    `;
+    const inscricoes = await db.all(selectSql);
+    return inscricoes;
+}
+
+async function exibirInscricoesEditais() {
+    const db = await Database.connect();
+
+    const selectSql = `
+        SELECT * FROM InscricoesEditais
+    `;
+    const inscricoes = await db.all(selectSql);
+    return inscricoes;
+}
+
 async function atualizarEvent(evento) {
     const db = await Database.connect();
     const updateSql = `
@@ -48,4 +78,4 @@ async function exibirSemana() {
 getUserFromSemana(1);*/
 
 
-export { /*exibirSemana, getUserFromSemana,*/ exibirEvent };
+export { /*exibirSemana, getUserFromSemana,*/ exibirEvent, exibirEditais, exibirInscricoesEventos, exibirInscricoesEditais, atualizarEvent };

@@ -1,7 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 //import { eventos, patrocinios } from './dados.js'
-import { exibirEvent } from './models/eventos.js'
+import { exibirEvent, exibirEditais, exibirInscricoesEventos, exibirInscricoesEditais } from './models/eventos.js'
 import  speakeasy  from 'speakeasy';
 import qrcode from 'qrcode';
 
@@ -54,8 +54,22 @@ app.get('/eventos', async (req, res) => {
     res.json(events);
 });
 
-app.get('/patrocinios', (req, res) => {
-    res.json(patrocinios);
+app.get('/inscricoes-eventos', async (req, res) => {
+    let inscricoes;
+    inscricoes = await exibirInscricoesEventos();
+    res.json(inscricoes);
+});
+
+app.get('/inscricoes-editais', async (req, res) => {
+    let inscricoes;
+    inscricoes = await exibirInscricoesEditais();
+    res.json(inscricoes);
+});
+
+app.get('/editais', async (req, res) => {
+    let editais;
+    editais = await exibirEditais();
+    res.json(editais);
 });
 
 app.get('/editais', (req, res) => {
