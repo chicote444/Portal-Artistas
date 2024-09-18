@@ -21,8 +21,9 @@ async function up() {
                 InscricaoEventoID INTEGER PRIMARY KEY AUTOINCREMENT,
                 EventoID INTEGER NOT NULL,
                 UsuarioID INTEGER NOT NULL,
-                DataInscricao DATE NOT NULL,
+                DataInscricao DATETIME NOT NULL,
                 FOREIGN KEY (EventoID) REFERENCES eventos(EventoID)
+                FOREIGN KEY (UsuarioID) REFERENCES usuarios(UsuarioID)
 
             )`;
     
@@ -36,6 +37,17 @@ async function up() {
                 CritériosSelecao TEXT NOT NULL,
                 ProcessoInscricao TEXT NOT NULL,
                 Organizador VARCHAR(255) NOT NULL
+            )`;
+
+    const InscricoesEditaisSql = `CREATE TABLE IF NOT EXISTS InscricoesEditais (
+                InscricaoEditalID INTEGER PRIMARY KEY AUTOINCREMENT,
+                EditalID INTEGER NOT NULL,
+                UsuarioID INTEGER NOT NULL,
+                Status ENUM(4) NOT NULL,
+                DataInscricao DATE NOT NULL,
+                Feedback TEXT,
+                FOREIGN KEY (EditalID) REFERENCES editais(EditalID)
+                FOREIGN KEY (UsuarioID) REFERENCES usuarios(UsuarioID)
             )`;
   
   /*const semanasql = `
@@ -54,6 +66,7 @@ async function up() {
   await db.run(EventSql);
   await db.run(InscrSql);
   await db.run(EditaisSql);
+  await db.run(InscricoesEditaisSql);
   //await db.run(semanasql)
 }
  

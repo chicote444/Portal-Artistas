@@ -5,7 +5,10 @@
   "main": "back/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "db:reload": "npm run db:drop && npm run db:load",
+    "db:load": "node back/database/load.js",
+    "db:drop": "rm back/database/db.sqlite"
   },
   "repository": {
     "type": "git",
@@ -23,7 +26,8 @@
     "express": "^4.19.2",
     "qrcode": "^1.5.4",
     "speakeasy": "^2.0.0",
-    "sqlite-async": "^1.2.0"
+    "sqlite-async": "^1.2.0",
+    "sqlite3": "^5.0.2"
   },
   "devDependencies": {
     "nodemon": "^3.1.4"

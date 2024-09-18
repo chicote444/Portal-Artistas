@@ -22,6 +22,8 @@ async function atualizarEvent(evento) {
     await db.run(updateSql, [evento.nome, evento.descricao, evento.data, evento.hora, evento.local, evento.valor, evento.id]);
 }
 
+
+
 async function exibirSemana() {
   const db = await Database.connect();
 
