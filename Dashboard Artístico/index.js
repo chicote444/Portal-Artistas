@@ -1,4 +1,4 @@
-fetch('https://reimagined-goggles-g4xq476wr4vxfx47-3000.app.github.dev/eventos')
+fetch('http://localhost:3000/eventos')
 .then (response => response.json())
 .then(json => {
   let newjson = JSON.stringify(json);
@@ -22,17 +22,41 @@ fetch('https://reimagined-goggles-g4xq476wr4vxfx47-3000.app.github.dev/eventos')
           y[i].innerHTML += newjson[i].popularidade;
           break;
         case 2:
-          a[i].innerHTML = "Data de Ocorrência: " + newjson[i].dataHora;
+          a[i].innerHTML = "Data de Ocorrência: " + newjson[i].DataHora;
           break;
         case 3:
           beta[i].innerHTML = `<img src= ../back/Database/${newjson[i].ImagemCartaz} alt="Imagem do evento" width=400px height=180px>`;
           break;
           
         case 0:
-          x[i].innerHTML = newjson[i].nome;
+          x[i].innerHTML = newjson[i].NomeEvento;
       }
     }
   }
+
+fetch('http://localhost:3000/editais')
+.then (response => response.json())
+.then(json => {
+  let newjson = JSON.stringify(json);
+  newjson = JSON.parse(newjson);
+  console.log(newjson);
+  let x = document.querySelectorAll(".editaltit");
+  let y = document.querySelectorAll(".editalcont");
+  for (let i = 0; i < newjson.length; i++) {
+    for (j = 0; j < 2; j++) {
+      switch (j) {
+        case 1:
+          y[i].innerHTML = newjson[i].Descricao;
+          break;
+        case 0:
+          x[i].innerHTML = newjson[i].Titulo;
+      }
+    }
+  }
+  console.log(x);
+  console.log(y);
+  console.log(newjson);
+});
   
   
 

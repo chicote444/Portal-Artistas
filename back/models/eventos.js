@@ -1,25 +1,34 @@
-import Database from '../Database/DBconfig.js';
+import prisma from '../Database/DBconfig.js';
 
 
 
 async function exibirEvent() {
-    const db = await Database.connect();
+    const db = await prisma.eventos.findMany();
 
     const selectSql = `
-        SELECT * FROM eventos
+        SELECT * FROM Eventos
     `;
-    const eventos = await db.all(selectSql);
-    return eventos;
+    return db;
+}
+
+async function insertEvent(evento) {
+    const db = await prisma.eventos.findMany();
+    const insertSql = `
+        INSERT INTO Eventos (NomeEvento, Descricao, DataHora, Localizacao, Organizador, InfoIngresso, ImagemCartaz, DataPublicacao)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    `;
+    await db.run(insertSql, [evento.nome, evento.descricao, evento.data, evento.hora, evento.local, evento.valor]);
 }
 
 async function exibirEditais() {
-    const db = await Database.connect();
+    const db = await prisma.editais.findMany();
 
     const selectSql = `
         SELECT * FROM Editais
     `;
-    const editais = await db.all(selectSql);
-    return editais;
+    if (db.length > 0) {
+        return db;
+    }
 }
 
 async function exibirInscricoesEventos() {

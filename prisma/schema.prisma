@@ -1,0 +1,35 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Eventos {
+  EventoID        Int @id @default(autoincrement())
+  NomeEvento      String 
+  Descricao       String
+  DataHora        DateTime
+  Localizacao     String 
+  Organizador     String 
+  InfoIngresso    String? 
+  ImagemCartaz    String?
+  DataPublicacao  DateTime
+}
+
+model Editais {
+  EditalID               Int @id @default(autoincrement())
+  Titulo                 String
+  Descricao              String
+  CategoriaArtistica     String
+  PrazoInscricao         DateTime
+  DetalhesFinanciamento  String
+  CriteriosSelecao       String
+  ProcessoInscricao      String
+  Organizador            String
+}

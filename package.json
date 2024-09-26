@@ -22,8 +22,11 @@
   "homepage": "https://github.com/chicote444/Portal-Artistas#readme",
   "description": "",
   "dependencies": {
+    "@prisma/client": "^5.20.0",
     "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "prisma": "^5.20.0",
     "qrcode": "^1.5.4",
     "speakeasy": "^2.0.0",
     "sqlite-async": "^1.2.0",
