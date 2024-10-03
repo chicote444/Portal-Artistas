@@ -33,3 +33,13 @@ model Editais {
   ProcessoInscricao      String
   Organizador            String
 }
+
+model User {
+  UserID    Int    @id @default(autoincrement())
+  Nome      String
+  Email     String
+  Senha     String
+  TipoUser  String @default("Admin")
+  DataCadastro DateTime
+  Ativo    Boolean
+}

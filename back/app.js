@@ -72,9 +72,6 @@ app.get('/editais', async (req, res) => {
     res.json(editais);
 });
 
-app.get('/editais', (req, res) => {
-    res.json(editais);
-});
 
 // Middleware para tratamento de rotas não encontradas
 app.use((req, res, next) => {
