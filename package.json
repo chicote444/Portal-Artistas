@@ -10,6 +10,9 @@
     "db:load": "node back/database/load.js",
     "db:drop": "rm back/database/db.sqlite"
   },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chicote444/Portal-Artistas.git"
@@ -26,6 +29,8 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.15",
     "prisma": "^5.20.0",
     "qrcode": "^1.5.4",
     "speakeasy": "^2.0.0",

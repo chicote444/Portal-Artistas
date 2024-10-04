@@ -1,36 +1,36 @@
 {        
        "Eventos": [
             {
-                "nome": "Recital Pedro Valença",
-                "descricao": "O Recital Pedro Valença promete ser um evento emocionante e imperdível! Aqui estão alguns detalhes sobre o que vai ocorrer: <br> Data e Hora: O recital acontecerá no dia 24 de fevereiro de 2024, às 17h, no Espaço Novo Tempo Umarizal1. Local: Espaço Novo Tempo Umarizal, Belém. Artista: Pedro Valença, um talentoso compositor conhecido por sucessos como “Haja Mais Amor”, “Tudo o que Eu Vivi” e 'Só o Começo'. Programação: Prepare-se para uma tarde repleta de música, emoção e boas vibrações. Pedro Valença encantará o público com suas canções que falam de amor, empatia e acolhimento1. Entrada: A entrada será simbólica, apenas 1kg de alimento não perecível, unindo música e solidariedade em um só lugar1. Não perca essa oportunidade única de vivenciar um recital inesquecível e contribuir para uma causa nobre. Marque na sua agenda e convide amigos e familiares para se juntarem a nós nesse evento incrível!",
-                "ataHora": "2024-09-13 17:01:00",
-                "localizacao": "Espaço Novo Tempo Umarizal, Belém",
+                "NomeEvento": "Recital Pedro Valença",
+                "Descricao": "O Recital Pedro Valença promete ser um evento emocionante e imperdível! Aqui estão alguns detalhes sobre o que vai ocorrer: <br> Data e Hora: O recital acontecerá no dia 24 de fevereiro de 2024, às 17h, no Espaço Novo Tempo Umarizal1. Local: Espaço Novo Tempo Umarizal, Belém. Artista: Pedro Valença, um talentoso compositor conhecido por sucessos como “Haja Mais Amor”, “Tudo o que Eu Vivi” e 'Só o Começo'. Programação: Prepare-se para uma tarde repleta de música, emoção e boas vibrações. Pedro Valença encantará o público com suas canções que falam de amor, empatia e acolhimento1. Entrada: A entrada será simbólica, apenas 1kg de alimento não perecível, unindo música e solidariedade em um só lugar1. Não perca essa oportunidade única de vivenciar um recital inesquecível e contribuir para uma causa nobre. Marque na sua agenda e convide amigos e familiares para se juntarem a nós nesse evento incrível!",
+                "DataHora": "2024-09-13T17:01:00Z",
+                "Localizacao": "Espaço Novo Tempo Umarizal, Belém",
                 "Organizador": "Pedro Valença",
                 "InfoIngresso": "A entrada será simbólica, apenas 1kg de alimento não perecível, unindo música e solidariedade em um só lugar1.",
                 "ImagemCartaz": "tela_14-9-2024_222142.jpeg",
-                "DataPublicacao": "2024-09-13"
+                "DataPublicacao": "2024-09-13T00:00:00Z"
             },
             {
-            "nome": "Exposição de Arte Moderna",
-            "descricao": "A exposição explorará temas como a evolução da arte moderna no Brasil, a influência do modernismo na cultura contemporânea e as novas tendências artísticas",
-            "ataHora": "2024-09-18 17:00:00",
-            "localizacao": "Museu de Arte Moderna, Rio de Janeiro",
+            "NomeEvento": "Exposição de Arte Moderna",
+            "Descricao": "A exposição explorará temas como a evolução da arte moderna no Brasil, a influência do modernismo na cultura contemporânea e as novas tendências artísticas",
+            "DataHora": "2024-09-18T17:00:00Z",
+            "Localizacao": "Museu de Arte Moderna, Rio de Janeiro",
             "Organizador": "Museu de Arte Moderna",
             "InfoIngresso": "Entrada gratuita",
             "ImagemCartaz": "exhibition-of-modern.jpg",
-            "DataPublicacao": "2024-09-13"   
+            "DataPublicacao": "2024-09-13T00:00:00Z"   
 
 
             },
             {
-                "nome": "Festival de Cinema Brasileiro",
-                "descricao": "O Festival de Cinema Brasileiro é um evento anual que celebra a diversidade e a criatividade do cinema nacional. Aqui estão alguns detalhes sobre o que vai ocorrer: <br> Data e Hora: O festival acontecerá de 1 a 10 de outubro de 2024, com sessões diárias a partir das 14h, no Cine Brasília. Local: Cine Brasília, Brasília. Programação: O festival contará com uma seleção de filmes brasileiros de diversos gêneros, incluindo drama, comédia, documentário e animação. Além das exibições, haverá debates, palestras e workshops com cineastas, atores e críticos de cinema. Entrada: A entrada será gratuita, sujeita à lotação da sala. Não perca essa oportunidade de prestigiar o cinema nacional e conhecer novos talentos da sétima arte. Marque na sua agenda e convide amigos e familiares para se juntarem a nós nesse evento imperdível!",
-                "ataHora": "2024-09-13 17:00:00",
-                "localizacao": "Cine Brasília, Brasília",
+                "NomeEvento": "Festival de Cinema Brasileiro",
+                "Descricao": "O Festival de Cinema Brasileiro é um evento anual que celebra a diversidade e a criatividade do cinema nacional. Aqui estão alguns detalhes sobre o que vai ocorrer: <br> Data e Hora: O festival acontecerá de 1 a 10 de outubro de 2024, com sessões diárias a partir das 14h, no Cine Brasília. Local: Cine Brasília, Brasília. Programação: O festival contará com uma seleção de filmes brasileiros de diversos gêneros, incluindo drama, comédia, documentário e animação. Além das exibições, haverá debates, palestras e workshops com cineastas, atores e críticos de cinema. Entrada: A entrada será gratuita, sujeita à lotação da sala. Não perca essa oportunidade de prestigiar o cinema nacional e conhecer novos talentos da sétima arte. Marque na sua agenda e convide amigos e familiares para se juntarem a nós nesse evento imperdível!",
+                "DataHora": "2024-09-13T17:00:00Z",
+                "Localizacao": "Cine Brasília, Brasília",
                 "Organizador": "Cine Brasília",
                 "InfoIngresso": "A entrada será gratuita, sujeita à lotação da sala.",
                 "ImagemCartaz": "OIPA.png",
-                "DataPublicacao": "2024-09-13"
+                "DataPublicacao": "2024-09-13T00:00:00Z"
             }
         ],
     
@@ -57,9 +57,9 @@
             "Titulo": "Edital de Seleção de Projetos Culturais",
             "Descricao": "O Ministério da Cultura, por meio da Secretaria de Fomento e Incentivo à Cultura, torna público o Edital de Seleção de Projetos Culturais para o ano de 2025. O objetivo é apoiar iniciativas culturais que contribuam para o desenvolvimento e difusão da cultura brasileira, promovendo a diversidade e o acesso à arte e à cultura. Podem participar do edital pessoas físicas e jurídicas, com projetos nas áreas de artes visuais, audiovisual, música, teatro, dança, literatura, patrimônio cultural, entre outras. As inscrições estarão abertas de 1º de outubro a 30 de novembro de 2024, e os projetos selecionados receberão recursos financeiros para sua realização. Não perca essa oportunidade de fazer parte da cultura brasileira e contribuir para o enriquecimento do nosso patrimônio cultural. Acesse o edital completo e saiba como participar!",
             "CategoriaArtistica": "Cultura",
-            "PrazoInscricao": "2024-10-01",
+            "PrazoInscricao": "2024-10-01T00:00:00Z",
             "DetalhesFinanciamento": "Os projetos selecionados receberão recursos financeiros do Fundo Nacional de Cultura, de acordo com a disponibilidade orçamentária e a classificação dos projetos. O valor do apoio financeiro será definido com base na análise da proposta e na viabilidade de execução do projeto.",
-            "CritériosSelecao": "Os projetos serão avaliados com base nos critérios de relevância cultural, viabilidade técnica e financeira, impacto social e sustentabilidade. Serão priorizados projetos que promovam a diversidade cultural, o acesso à cultura e a formação de público.",
+            "CriteriosSelecao": "Os projetos serão avaliados com base nos critérios de relevância cultural, viabilidade técnica e financeira, impacto social e sustentabilidade. Serão priorizados projetos que promovam a diversidade cultural, o acesso à cultura e a formação de público.",
             "ProcessoInscricao": "Os interessados deverão preencher o formulário de inscrição disponível no site do Ministério da Cultura, anexando a documentação exigida e o projeto cultural detalhado. Os projetos selecionados serão divulgados no site do MinC e receberão orientações para a captação de recursos e a execução do projeto.",
             "Organizador": "Ministério da Cultura"
         },
@@ -67,9 +67,9 @@
             "Titulo": "Edital de Apoio a Festivais de Cinema",
             "Descricao": "A Ancine, em parceria com o Ministério da Cultura, lança o Edital de Apoio a Festivais de Cinema para o ano de 2025. O objetivo é fomentar a realização de festivais de cinema em todo o Brasil, promovendo a difusão da produção audiovisual nacional e o intercâmbio cultural entre cineastas, produtores e público. Podem participar do edital pessoas jurídicas, com projetos de festivais de cinema a serem realizados em 2025. Os projetos selecionados receberão recursos financeiros para a realização do festival, além de apoio técnico e logístico da Ancine e do MinC. Não perca essa oportunidade de promover o cinema brasileiro e contribuir para o fortalecimento da nossa indústria audiovisual. Acesse o edital completo e saiba como participar!",
             "CategoriaArtistica": "Cinema",
-            "PrazoInscricao": "2024-10-01",
+            "PrazoInscricao": "2024-10-01T00:00:00Z",
             "DetalhesFinanciamento": "Os projetos selecionados receberão recursos financeiros para a realização do festival, de acordo com a disponibilidade orçamentária da Ancine e do MinC.",
-            "CritériosSelecao": "Os projetos serão avaliados com base nos critérios de relevância cultural, viabilidade técnica e financeira, impacto social e sustentabilidade. Serão priorizados projetos que promovam a diversidade cultural, o acesso à cultura e a formação de público.",
+            "CriteriosSelecao": "Os projetos serão avaliados com base nos critérios de relevância cultural, viabilidade técnica e financeira, impacto social e sustentabilidade. Serão priorizados projetos que promovam a diversidade cultural, o acesso à cultura e a formação de público.",
             "ProcessoInscricao": "Os interessados deverão preencher o formulário de inscrição disponível no site da Ancine, anexando a documentação exigida e o projeto do festival de cinema. Os projetos selecionados serão divulgados no site da Ancine e receberão orientações para a captação de recursos e a execução do festival.",
             "Organizador": "Ancine"
         },
@@ -77,9 +77,9 @@
             "Titulo": "Edital de Apoio a Projetos de Teatro",
             "Descricao": "A Funarte, em parceria com o Ministério da Cultura, lança o Edital de Apoio a Projetos de Teatro para o ano de 2025. O objetivo é incentivar a produção teatral brasileira, promovendo a realização de espetáculos, festivais, oficinas e outras atividades relacionadas ao teatro. Podem participar do edital pessoas jurídicas, com projetos de teatro a serem realizados em 2025. Os projetos selecionados receberão recursos financeiros para a realização das atividades propostas, além de apoio técnico e logístico da Funarte e do MinC. Não perca essa oportunidade de fortalecer o teatro brasileiro e contribuir para a formação de plateias e artistas. Acesse o edital completo e saiba como participar!",
             "CategoriaArtistica": "Teatro",
-            "PrazoInscricao": "2024-10-01",
+            "PrazoInscricao": "2024-10-01T00:00:00Z",
             "DetalhesFinanciamento": "Os projetos selecionados receberão recursos financeiros para a realização das atividades propostas, de acordo com a disponibilidade orçamentária da Funarte e do MinC.",
-            "CritériosSelecao": "Os projetos serão avaliados com base nos critérios de relevância cultural, viabilidade técnica e financeira, impacto social e sustentabilidade. Serão priorizados projetos que promovam a diversidade cultural, o acesso à cultura e a formação de público.",
+            "CriteriosSelecao": "Os projetos serão avaliados com base nos critérios de relevância cultural, viabilidade técnica e financeira, impacto social e sustentabilidade. Serão priorizados projetos que promovam a diversidade cultural, o acesso à cultura e a formação de público.",
             "ProcessoInscricao": "Os interessados deverão preencher o formulário de inscrição disponível no site da Funarte, anexando a documentação exigida e o projeto de teatro detalhado. Os projetos selecionados serão divulgados no site da Funarte e receberão orientações para a captação de recursos e a execução das atividades.",
             "Organizador": "Funarte"
         }

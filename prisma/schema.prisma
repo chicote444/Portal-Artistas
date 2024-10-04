@@ -34,6 +34,16 @@ model Editais {
   Organizador            String
 }
 
+model Contato {
+  id      Int    @id @default(autoincrement())
+  nome    String
+  email   String
+  opcao   String
+  assunto String
+  mensagem String
+  arquivo String
+}
+
 model User {
   UserID    Int    @id @default(autoincrement())
   Nome      String

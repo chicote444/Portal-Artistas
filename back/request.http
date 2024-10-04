@@ -24,3 +24,11 @@ GET {{internet}}/generate-secret
 ###
 
 POST {{internet}}/verify-content
+
+###
+
+POST {{domain}}/upload
+
+###
+
+POST {{domain}}/contato

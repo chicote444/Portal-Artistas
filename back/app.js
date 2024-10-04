@@ -4,6 +4,10 @@ import cors from 'cors'
 import { exibirEvent, exibirEditais, exibirInscricoesEventos, exibirInscricoesEditais } from './models/eventos.js'
 import  speakeasy  from 'speakeasy';
 import qrcode from 'qrcode';
+import contatoRoutes from './routes/contato.js';
+import { fileURLToPath } from 'url';
+import path from 'path';
+import multer from 'multer';
 
 class HTTPError extends Error {
   constructor(message, code) {
@@ -72,6 +76,33 @@ app.get('/editais', async (req, res) => {
     res.json(editais);
 });
 
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const PORT = 3000;
+
+console.log(__filename);
+console.log(__dirname);
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/');
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + '-' + file.originalname);
+  }
+});
+
+const upload = multer({ storage: storage });
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+app.post('/upload', upload.single('arquivo'), (req, res) => {
+  res.send('Arquivo enviado com sucesso!');
+});
+
+app.use('/contato', contatoRoutes);
 
 // Middleware para tratamento de rotas não encontradas
 app.use((req, res, next) => {

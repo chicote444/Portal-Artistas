@@ -6,25 +6,37 @@ const prisma = new PrismaClient();
 
 async function main() {
    const file = resolve('prisma', 'evento.json');
-   const seed = JSON.parse(readFileSync(file, 'utf-8')); 
+   const seed = JSON.parse(readFileSync(file)); 
 
    
-    for(const seman of seed.eventos){
+    for(const seman of seed.Eventos){
       await prisma.eventos.create({
         data: seman,
           
       
     });
 
-    for(const editall of seed.editais){
+    
+  }
+  for(const editall of seed.Editais){
       await prisma.editais.create({
         data: editall,
           
       
     });
+    console.log(editall);
     }
-  }
-}
+  await prisma.user.create({
+    data: {
+      Nome: 'Chico',
+      Email: 'chicohaikal@gmail.com',
+      Senha: '123456',
+      TipoUser: 'Admin',
+      DataCadastro: new Date(),
+      Ativo: true,
+    },
+  })
+};
   
   main()
     .then(async () => {
