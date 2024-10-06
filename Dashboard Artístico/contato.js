@@ -1,3 +1,4 @@
+const opcoes = document.querySelectorAll('.umm');
 const valores = document.querySelectorAll('.inputs');
 
 async function enviarContato(event) {
@@ -6,7 +7,15 @@ async function enviarContato(event) {
   const nome = valores[1].value;
   const assunto = valores[2].value;
   const mensagem = valores[3].value;
+  if (opcoes[0].checked) {
+     opcao = opcoes[0].value;
+  }
+  else {
+     opcao = opcoes[1].value;
+  }
+  console.log(opcao);
   const imagemRecebida = valores[4].files[0];
+  alert("Formulário enviado com sucesso! E-mail de confirmação enviado.");
   fetch('http://localhost:3000/contato', {
     method: 'POST',
     headers: {
@@ -17,6 +26,7 @@ async function enviarContato(event) {
       nome,
       assunto,
       mensagem,
+      opcao
     }),
   })
     .then((response) => response.text())
@@ -26,4 +36,6 @@ async function enviarContato(event) {
     .catch((error) => {
       console.error('Error:', error);
     });
+    
+
 };

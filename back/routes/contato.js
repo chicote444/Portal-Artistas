@@ -4,6 +4,7 @@ import multer from 'multer';
 import path from 'path';
 import { PrismaClient } from '@prisma/client';
 import transporter from '../config/mail.js';
+import 'dotenv/config';
 
 
 const router = express.Router();
@@ -28,7 +29,7 @@ router.post('/', upload.single('imagemRecebida'), async (req, res) => {
   }
 
   try {
-    const novoContato = await prisma.contato.create({
+    await prisma.contato.create({
       data: {
         nome,
         email,

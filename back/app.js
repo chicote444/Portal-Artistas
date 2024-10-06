@@ -8,6 +8,7 @@ import contatoRoutes from './routes/contato.js';
 import { fileURLToPath } from 'url';
 import path from 'path';
 import multer from 'multer';
+import User from './models/user.js';
 
 class HTTPError extends Error {
   constructor(message, code) {
@@ -23,6 +24,17 @@ app.use(cors());
 
 app.get('/', (req, res) => {
     res.send('Hello World')
+});
+
+app.post('/users', async (req, res) => {
+  try {
+    const user = req.body;
+    const newUser = await User.criarUser(user);
+    res.status(201).json(newUser);
+
+  } catch (error) {
+    res.status(400).json({ error: 'Erro ao criar usuário' });
+  }
 });
 
 app.get('/generate-secret', (req, res) => {

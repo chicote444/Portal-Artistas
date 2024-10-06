@@ -32,3 +32,7 @@ POST {{domain}}/upload
 ###
 
 POST {{domain}}/contato
+
+###
+
+POST {{domain}}/users

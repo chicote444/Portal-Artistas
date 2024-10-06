@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    
+}
+
+main {
+    background-color: #353D41;
+}
+
+.header {
+    padding: 0 0dvw 0 0;
+}
+
+.navbar-toggler-icon {
+    font-size: 2rem;
+    padding: 0 0 0 0rem;
+    margin: 0 0 0 0dvw;
+    color: white;
+}
+
+.span {
+    padding: 100dvw;
+    margin: 0 0 0 0;
+}
+
+form {
+    margin: 0 0 0 0dvw;
+}
+
+.navbar-brand {
+    padding: 0 30dvw 0 0
+}
+
+.bott {
+    padding: 0 0 0 0dvw;
+}
+
+section {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 5dvh 15dvw 20dvw 15dvw;
+    border-radius: 1rem;
+    background-color: #f7f7f7;
+    padding: 0 0;
+}
+
+form {
+    margin: 3dvh 10dvw 3dvh 10dvw;
+}

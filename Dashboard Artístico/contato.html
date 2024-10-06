@@ -62,13 +62,13 @@
              <div class="form-container">
                 <ladinho>
                     <h2>Tem alguma dúvida, sugestão ou deseja informar um erro? Escreva abaixo:</h2> <br>
-                    <form action="http://localhost:3000/contato" method="POST" enctype="multipart/form-data" onsubmit="enviarContato()">
+                    <form action="http://localhost:3000/contato" method="POST" enctype="multipart/form-data" onsubmit="enviarContato(event)">
                         <div class="custom-radio">
-                            <input type="radio" id="duvidaSugestao" name="opcao" value="duvidaSugestao" required>
+                            <input type="radio" class="umm" id="duvidaSugestao" name="opcao" value="duvidaSugestao" required>
                             <label for="duvidaSugestao">Dúvida ou Sugestão</label>
                         </div>
                         <div class="custom-radio">
-                            <input type="radio" id="informarErro" name="opcao" value="informarErro" required>
+                            <input type="radio" class="umm" id="informarErro" name="opcao" value="informarErro" required>
                             <label for="informarErro">Informar erro</label>
                         </div><br>
                         

@@ -1,3 +1,12 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333;
+    }
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #ffffff;
@@ -12,7 +21,7 @@ body {
     }
     
     .login-container {
-    margin: 5dvw 4dvw 0 35dvw;
+    margin: 5dvw auto 0 auto;
     background-color: #ffffff;
     width: 300px;
     padding: 50px;
